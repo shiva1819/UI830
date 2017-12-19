@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		/*first-child, last-child, nth-child(), only-child,nth-child(2n+2)*/
+		/* :active, :hover, visited, :link, :before, :after, :first-line, :first-letter, :selection*/
+
+		body{
+			padding-top: 100px;
+		}
+		ul li:nth-child(odd){
+			color: red;
+		}
+
+		#btn{
+			text-decoration: none;
+			padding: 20px;
+			border:1px solid;
+			background-color: #666;
+			color: #fff;
+			margin-left: 100px;		
+			position: relative;	
+		}
+		#btn:hover{
+			background-color: #ccc;
+			color: #fff;
+		}
+		#btn:before{
+			content: "";
+			position: absolute;
+			width: 100px;
+			height: 2px;
+			background-color: red;
+			left: -110px;
+			top:50%;
+		}
+		#btn:after{
+			content: "";
+			position: absolute;
+			width: 100px;
+			height: 2px;
+			background-color: red;
+			right: -110px;
+			top:50%;
+		}
+		/*#btn:link{
+			color: red;
+		}
+		#btn:hover{
+			color: lightblue;
+		}
+		#btn:active{
+			color: yellow;
+		}
+		#btn:visited{
+			color: crimson;
+		}*/
+
+		p:first-line{
+			color: red;
+			font-size: 20px;
+		}
+		p:first-letter{
+			font-size: 34px;
+			font-style: italic;
+			font-weight: bold;
+		}
+
+		p::selection{
+			background-color: #ccc;
+			color: red;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<a href="#" id="btn"> Content </a>
+
+	<ul>
+		<li>
+			Home
+		</li>
+			<li>
+			About
+		</li>
+			<li>
+			Gallery
+		</li>
+		<li>
+			Contact
+		</li>
+		<li>
+			Contact
+		</li>
+	</ul>
+	<p>
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+	</p>
+</body>
+</html>
