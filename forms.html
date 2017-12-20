@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		p input[name='username']{
+			color: blue;
+			width: 400px;
+			font-size: 20px;
+			font-weight: bold;
+			font-style: italic;
+			outline: none;
+			border:none;
+			padding: 5px;
+			background-color: #999;
+		}
+		p input[name='username']:focus{
+			background: #777;
+		}
+
+
+	</style>
+</head>
+<body>
+	<form>
+		<p>
+			Username : <input type="text" name="username" maxlength="5" id="" value="" placeholder="Please enter your name" required>
+		</p>
+		<p>
+			Email 	 : <input type="email" name="email" required> <!-- h5 -->
+		</p>
+		<p>
+			password : <input type="password" name="password" required>
+		</p>
+		<p>
+			<h3> Gender </h3>
+			<input type="radio" name="gender"> male 
+			<input type="radio" name="gender"> female
+		</p>
+		<p>
+			<h3> Languages known </h3>
+			<input type="checkbox" name="telugu"> Telugu
+			<input type="checkbox" name="telugu"> Hindi
+			<input type="checkbox" name="telugu"> English
+			<input type="checkbox" name="telugu"> Tamil
+		</p>
+		<p>
+			<textarea>
+				
+			</textarea>
+		</p>
+		<p>
+			<select>
+				<option>-- Please choose on -- </option>
+				<option> Demo </option>
+				<option> Demo 1 </option>
+				<option> Demo 2</option>
+				<option> Demo 3</option>
+
+			</select>
+		</p>
+		<button type="submit"> Submit </button> <!-- h5 s-->
+		<input type="button" name="Sign Up" value="Sign Up"> 
+		<!-- button, submit -->
+	</form>	
+</body>
+</html>
