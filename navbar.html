@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet">
+	<style type="text/css">
+
+		*{
+			margin: 0px;
+			padding: 0px;
+			font-family: 'Titillium Web', sans-serif;
+		}
+		#main{
+			height: 100vh;
+			background: url(task/WebsBackground.png) no-repeat center;
+			background-size:cover; /* cover | contain*/
+		}
+		#header{
+			width: 75%;
+			margin: auto;
+			padding: 10px;
+			/*background: #ccc;*/
+			/*0-9,a-f*/
+			color: #eaeaff;
+		}
+		#header h2{
+			width: 20%;
+			float: left;
+			/*opacity: 1;*/
+		}
+		#menu{
+			width: 80%;
+			float: right;
+		}
+		#menu ul{
+			
+			/*float: right;*/
+		}
+		#menu li{
+			list-style-type: none;
+			float: left;
+			padding: 10px;
+			/*margin-left: 10px;*/
+			box-sizing: border-box;
+			/*display: inline-block;*/
+			/*background-color: #eee;*/
+		}
+		#menu li:hover{
+			background: rgba(200,200,200,0.2);
+		}
+
+		.clear{
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="main">
+	<div id="header">
+		<h2> Logo </h2>
+		<div id="menu">
+			<ul>
+				<li> Home </li>
+				<li> About </li>
+				<li> Contact </li>
+				<div class="clear"></div>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+	</div>
+</body>
+</html>

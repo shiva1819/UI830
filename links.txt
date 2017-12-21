@@ -1,0 +1,5 @@
+http://fontawesome.io/icons/
+https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+
+https://themeforest.net/tags/html5
+http://ekramit.net/tf/ovi-demo/ovi/index_static.html
