@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		//  number methodss
+
+		// Math.round(4.4), Math.ceil(4.1), Math.floor(4.0), Math.random();
+
+		// console.log(Math.ceil(Math.random() * 5));
+
+		var ranNum = Math.ceil(Math.random() * 5)
+		console.log(ranNum);
+
+		var Guess = prompt('Please choose a number between 1 - 5');
+		
+		console.log();
+		Guess = parseInt(Guess);
+		
+		console.log(typeof(Guess));
+
+		if(Guess == ranNum){
+			console.log('correct..!!!');
+			alert('correct..!!!')
+		}else{
+			alert("No...!!!");
+		}
+
+	</script>
+</body>
+</html>
