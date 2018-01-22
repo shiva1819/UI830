@@ -6,9 +6,9 @@
 <body>
 
 	<script type="text/javascript">
-		// length, indexOf(), lastIndexOf(), search(), slice(), subString(), subStr();
+		// length, indexOf(), lastIndexOf(), search(), slice(), substring(), subStr(), concat();
 
-		var str = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since dummy the 1500s, when an unknown printer dummy took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+		var str = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since dummy the 1500s, when an unknown printer dummy took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Shiva Ipsum.";
 
 		var url = "https://www.lipsum.com/";
 
@@ -22,8 +22,18 @@
 		
 		console.log(str.length);
 
-		console.log(str.indexOf('dummyyy', 121));
+		console.log(str.search('dummy'));
 
+		// str = str.slice(6, 12); // slice(start, end);
+
+		// console.log(str.substring(-12,6)); // substring(start,end) - also accepts -ve values
+
+		console.log(str.substr(12,20)) // substr(start, length);
+
+		var str1 = "Digital";
+		var str2 = "Lync"
+
+		console.log(str1.concat(' ',str2));
 
 	</script>
 </body>
