@@ -7,6 +7,92 @@
 
 	<script type="text/javascript">
 			//  Date Methods, getDay(), getYear(), getMonth()..;
+			// functions,
+			// constructor Objects.
+			// polymorphism
+			// encapsulation
+			// closure
+			// hoisting
+			// 
+
+			// ------------- Date Methods -------------
+			var today = new Date()
+			console.log( today );
+
+			console.log(today.getDay());
+			console.log(today.getMonth());
+			console.log(today.getYear());
+
+
+			// ------------- Immutable -------------
+			var abc = 10;
+			var cda = abc;
+
+			cda = 20; // 20;
+			console.log(cda) // 20;
+			console.log(abc) // 10;
+
+			// ------------- mutable -------------
+
+			var obj = {name:'dummy'};
+			var demo = obj;
+
+			demo.name = "dummy1"
+
+			console.log(demo) // name:dummy1
+			console.log(obj) // name:dummy1
+
+			// --------- Object values ----------
+
+			var Obj1 = {
+				"str name":"string",
+				num: 10,
+				exp:true,
+				arr:[12,234,44],
+				obj_1:{
+					name:"Shiva",
+					lname:"prasad"
+				},
+				myfn:function(){
+					console.log('Hey this is FUnction in object....');
+				}
+			}
+
+			console.log(Obj1["num"]) // 10
+			console.log(Obj1["str name"]) // string.
+
+			console.log(Obj1.myfn());
+
+		// -------- Function adv ------------
+
+				// regular function
+		function demofn(){
+			var tst = "test_one";
+			alert(tst);
+		}	
+				// ----- annanymous function
+		/*var arrFn = function(){
+			var tst1 = 'Test_two';
+			alert(tst1);
+		}*/
+
+				// ------ Self Invoking function
+		/*(function(){
+			alert(123);
+		})();*/
+
+		// arrFn();
+		// demofn();
+
+		function demofnPar(tst){
+			alert(tst);
+		}	
+
+		demofnPar('one');
+		demofnPar('Two');
+		demofnPar('Three');
+		demofnPar('Four');
+
 	</script>
 </body>
 </html>
