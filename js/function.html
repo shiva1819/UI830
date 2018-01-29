@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		var demo,demo1;
+
+		console.log(demo(10));
+// ----------------- Global Scope and Local Scope -----------------
+		var tst1 = 20; // global scopes
+		function dummy(){
+			var tst1 = 10; // local scope.
+			// alert(tst1);
+		}
+		
+		dummy();
+		//alert(tst1);
+
+
+
+// ------------------------ Closure --------------------
+
+		function demo(abc){
+			// console.log(10); // 
+			var ans;
+			function test(def){
+				ans = def + abc
+			}
+			test(20);
+			return ans;
+		}	
+
+		demo1 = 10;
+	
+
+// ------------------ Encapsulation ---------------------
+
+	(function(){
+		var abc = "somex";
+		alert(abc);
+	})();
+
+	var Obj = {
+		demo:function(){
+			//alert(1);
+			return 1;
+		},
+		demo1:function(){
+			//alert(2);
+			return Obj.demo() + 2;
+		},
+		demo2:function(){
+			//alert(3);
+			return 3;
+		}
+	}
+
+	console.log(Obj.demo1() + Obj.demo2());
+
+// ---------------- constructor ---------------------------;
+	var Enc = function(name){
+		this.name = name;
+		this.age =  30;
+		this.email = "somex@gmail.com"
+	}
+
+	var Enc1 = new Enc('Shiva');
+	var Enc2 = new Enc('Prasad');
+
+
+	console.log(Enc2.fullaName());
+
+
+
+	</script>
+</body>
+</html>
