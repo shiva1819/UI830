@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.demo{
+			width: 100px;
+			height: 100px;
+			margin:20px 0px;
+			border:1px solid; 
+		}
+	</style>
+</head>
+<body>	
+	 <div id="one" class="demo">
+	 	<h1>this is One...</h1>
+	 </div>
+
+	 <div id="two" class="demo">
+	 	<h1>this is two...</h1>
+	 </div>
+
+	 <div id="three" class="demo">
+	 	this is three...
+	 </div>
+
+	 <script type="text/javascript">
+
+	 	// elementName, Classname, Id
+
+	 	var One = document.getElementById('one'); // unique ID. 
+				 	document.getElementsByClassName('demo')[0];  // 
+				 	document.getElementsByTagName('div')[1]; 
+		var h2 = document.getElementsByTagName('h2')[0];
+		console.log(h2);
+
+	 	// innerText, innerHTML, (if right side value is nothing it is getMethod) 
+	 	One.addEventListener('click', demo, false);
+	 	h2.addEventListener('click', demo1, false);
+
+
+	 	function demo(){
+		 	// One.innerHTML = "<h1> This is Dynamic Content...</h1>"
+		 	// console.log(One.innerHTML);
+			alert(1)
+		}
+		function demo1(){
+		 	// One.innerHTML = "<h1> This is Dynamic Content...</h1>"
+		 	// console.log(One.innerHTML);
+			alert(2)
+		}
+
+	 	
+	 </script>
+</body>
+</html>

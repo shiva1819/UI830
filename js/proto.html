@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var obj = function(){};
+
+
+		obj.prototype.name = "Shiva";
+		obj.prototype.age = 30;
+
+		obj.prototype.fullName = function(){
+			return "Hai my Name is " + this.name + " and i am " + this.age +" yrs old";
+		};
+
+		var demo = new obj();
+
+		console.log(demo.fullName());
+	</script>
+</body>
+</html>

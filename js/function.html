@@ -62,17 +62,22 @@
 	console.log(Obj.demo1() + Obj.demo2());
 
 // ---------------- constructor ---------------------------;
-	var Enc = function(name){
+	var Enc = function(name,age,email){
 		this.name = name;
-		this.age =  30;
-		this.email = "somex@gmail.com"
+		this.age =  age;
+		this.email = email;
+		this.fullDetails = function(){
+			var demo = 10;
+
+
+			return this.name + "---" + this.email
+		}
 	}
 
-	var Enc1 = new Enc('Shiva');
-	var Enc2 = new Enc('Prasad');
+	var Enc1 = new Enc('Shiva',30,"demo@gmail.com");
+	var Enc2 = new Enc('Prasad', 25, "somex@gmail.com");
 
-
-	console.log(Enc2.fullaName());
+	console.log(Enc2.fullDetails());
 
 
 
