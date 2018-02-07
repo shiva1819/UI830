@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.fL{
+			float: left;
+		}
+		.fR{
+			float: right;
+		}
+		#create_block{
+			width: 40%;
+			border: 1px solid;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		
+		h2{
+			width: 40%;
+			background: #4a4747;
+			color: #fff;
+			text-align: center;
+			line-height: 50px;
+			margin: 0px;
+		}
+		#form-details label{
+			font-size: 20px;
+			line-height: 40px;
+			font-weight: 600;
+		}
+		#form-details .form_field{
+			width: 100%;
+			line-height: 30px;
+			font-size: 22px;
+			color: #666;
+			font-weight: 200;
+			padding: 0px 5px;
+			box-sizing: border-box;
+		}
+		select{
+			line-height: 40px;
+		}
+		button{
+			width: 150px;
+			line-height: 25px;
+			background-color: #438e5d;
+			color: #fff;
+			padding: 5px;
+			box-sizing: border-box;
+			font-size: 20px;
+			margin-top: 50px;
+
+		}
+
+
+		#update_block{
+			width: 55%;
+			/*border: 1px solid;*/
+		}
+
+		table{
+			width: 100%;
+			/*border: 1px solid;*/
+			border-collapse: collapse;
+		}
+		tr,th,td{
+			border-bottom:1px solid;
+			text-align: center;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		.clearfix{
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<h2> Create Contact </h2>
+		<div class="fL" id="create_block">
+			<div id="form-details">
+				<p>
+					<label for="name"> CONTACT NAME </label>
+					<input type="text" name="name" id="user_name" class="form_field">
+				</p>
+				<p>
+					<label for="number"> CONTACT Number </label>
+					<input type="text" name="number" id="user_number" class="form_field">
+				</p>
+				<p>
+					<label for="name"> TYPE OF CONTACT </label>
+					<select id="group" class="form_field">
+						<option value=""> --- Please Select --- </option>
+						<option value="friend"> Friend </option>
+						<option value="Business"> Business </option>
+						<option value="Work"> Work </option>
+						<option value="Family"> Family </option>
+
+					</select>
+				</p>
+				<p>
+					<button type="button" id="save"> SAVE </button>
+				</p>
+			</div>
+		</div>
+		<div class="fR" id="update_block">
+			<table>
+				<thead>
+					<tr>
+						<th>
+							Name
+						</th>
+						<th>
+							Contact
+						</th>
+						<th>
+							Group
+						</th>
+						<th>
+							EDIT/DELETE
+						</th>
+					</tr>
+				</thead>
+				<tbody id="contact_update_area">
+					<tr>
+						<td>
+							SOmex
+						</td>
+						<td>
+							12312312
+						</td>
+						<td>
+							sdas
+						</td>
+						<td>
+							edit/delete
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
