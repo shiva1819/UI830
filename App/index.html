@@ -41,7 +41,7 @@
 		select{
 			line-height: 40px;
 		}
-		button{
+		button#save{
 			width: 150px;
 			line-height: 25px;
 			background-color: #438e5d;
@@ -70,6 +70,9 @@
 			padding: 10px;
 			box-sizing: border-box;
 		}
+		.error{
+			color: red;
+		}
 		.clearfix{
 			clear: both;
 		}
@@ -81,15 +84,16 @@
 		<div class="fL" id="create_block">
 			<div id="form-details">
 				<p>
-					<label for="name"> CONTACT NAME </label>
+					<label for="name"> CONTACT NAME </label><span class="error"> * </span>
 					<input type="text" name="name" id="user_name" class="form_field">
+
 				</p>
 				<p>
-					<label for="number"> CONTACT Number </label>
+					<label for="number"> CONTACT Number </label><span class="error"> * </span>
 					<input type="text" name="number" id="user_number" class="form_field">
 				</p>
 				<p>
-					<label for="name"> TYPE OF CONTACT </label>
+					<label for="name"> TYPE OF CONTACT </label><span class="error"> * </span>
 					<select id="group" class="form_field">
 						<option value=""> --- Please Select --- </option>
 						<option value="friend"> Friend </option>
