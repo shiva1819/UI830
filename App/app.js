@@ -2,6 +2,7 @@ var Name = document.getElementById('user_name');
 var Contact = document.getElementById('user_number');
 var Group = document.getElementById('group');
 var Save = document.getElementById('save');
+var btnWrap = document.getElementById('btnWrap');
 
 var Tbody = document.getElementById('contact_update_area');
 
@@ -19,7 +20,7 @@ errorInfo("none");
 
 
 Save.addEventListener('click', function(){
-	// Name.value
+	Name.value
 	Contact.value
 	Group.value
 
@@ -87,12 +88,54 @@ Save.addEventListener('click', function(){
 
 
 	Edit.onclick = function(){
-		alert("---------");
+		// alert("---------");
 		var TR = this.parentNode.parentNode;
-		var EditName = TR.childNodes[0].innerText;
-		var EditContact = TR.childNodes[1].innerText;
-		var EditGroup = TR.childNodes[2].innerText;
-		console.log(EditName);
+		var EditName = TR.childNodes[0];
+		var EditContact = TR.childNodes[1];
+		var EditGroup = TR.childNodes[2];
+		
+
+		Name.value = EditName.innerText;
+		Contact.value = EditContact.innerText;
+		Group.value = EditGroup.innerText;
+
+		var update = document.createElement('button');
+			update.innerText = "Update";
+
+		// setAttribute(id,value); getAttribute(); removeAttribute();
+
+		// ele.attribute = value; 
+
+		update.className = "save";
+
+		Save.style.display = 'none';
+		btnWrap.appendChild(update);
+
+		update.onclick = function(){
+			if(Name.value == ""){
+				alert('Please enter you name..');
+				return false;
+			}else if(Contact.value == ""){
+				alert('Please enter you Contact..');
+				return false;
+			}else if(Group.value == ""){
+				alert('Please choose a group..');
+				return false;
+			}else{
+				EditName.innerText = Name.value;
+				EditContact.innerText = Contact.value;
+				EditGroup.innerText = Group.value;
+
+				Name.value = ""
+				Contact.value = ""
+				Group.value = ""
+
+				this.style.display = "none";
+				Save.style.display = "inline";
+			}
+		}
+
+
 	}
 
 }
