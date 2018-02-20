@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			
+		}
+		#one{
+			/*width: 500px;*/
+			height: 100vh;
+			padding: 10px;
+			/*border:10px solid rgba(125,125,150,0.6);*/
+			background:url(bg1.jpg) no-repeat;
+			background-size:cover; /*cover | contain */
+			
+			-webkit-background-size:cover; /*chrome | safari*/
+			-moz-background-size:cover;
+			-ms-background-size:cover;
+			-o-background-size:cover;
+
+			box-sizing: border-box;
+
+			/*background-origin:content-box;*/ /*border-box, padding-box, content-box*/
+			/*background-clip: border-box;*/
+		}
+		h1{
+			width: 30%;
+			margin:250px auto;
+			color: #fff;
+		}
+		#bgClr{
+			width: 500px;
+			height: 500px;
+			margin: auto;
+			/*background:repeating-linear-gradient(45deg, lime 50%,orange 60%, blue 70%, pink 80%);*/
+			background:radial-gradient(lime ,orange);
+			/*border-radius: 5%; */
+		/*	border-top-right-radius: 20%;
+			border-top-left-radius: 20%;*/
+			box-shadow:5px 2px 5px 5px #000;
+			text-shadow:5px 5px 5px #000;
+			transition: 1s;
+
+		}
+		#bgClr:hover{
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div id="one">
+		<h1>This is some content</h1>
+	</div>
+	<div id="bgClr">
+		<h1> THIS IS TEXT </h1>
+	</div>
+</body>
+</html>
