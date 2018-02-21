@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		@font-face{
+			font-family: "Caviar_Dreams_Bold";
+			src:url('fonts/Caviar_Dreams_Bold.ttf');
+		}
+		div#demo{
+			font-family: "Caviar_Dreams_Bold";	
+			width:500px;
+			/*margin: auto;*/
+			text-align: justify;
+			/*transition: 1000ms;*/
+			transition-duration: 1s;
+			transition-property:letter-spacing,width, margin-left;
+			transition-delay:1s;
+			transition-timing-function:cubic-bezier(0,.76,.02,.89);
+			/*opacity: 0;*/
+		}
+		div#demo:hover{
+			width: 600px;
+			opacity: 1;
+			margin-left: 200px;
+			letter-spacing: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="demo">
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+	</div>
+</body>
+</html>
