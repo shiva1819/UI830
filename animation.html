@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#ball{
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			background-color: #ccc;
+			border:2px solid red;
+			text-align: center;
+			line-height: 100px;
+			animation-name: demo;
+			animation-duration: 2s;
+			animation-iteration-count:infinite;
+			animation-direction: alternate-reverse;
+			animation-timing-function:linear;
+		}
+		#ball:hover{
+			animation-play-state: paused;
+		}
+		@keyframes demo{
+			/*from{margin-left: 10px; transform: rotate(1turn);}
+			to{margin-left: 300px; transform: rotate(3turn);}*/
+			0%{margin-left: 10px; transform: rotate(1turn);}
+			40%{margin-left: 100px; margin-top: 100px; transform: rotate(2turn);}
+			80%{margin-left: 200px; margin-top: 10px; transform: rotate(3turn);}
+			100%{margin-left: 300px; margin-top:300px;transform: rotate(4turn);}
+		}
+	</style>
+</head>
+<body>
+	<div id="ball">
+		X
+	</div>
+</body>
+</html>
