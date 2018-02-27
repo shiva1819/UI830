@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>S</title>
+</head>
+<body>
+	<audio autoplay controls loop muted>
+		<source src="02.mp3" type="audio/mp3">
+		<source src="02.mp3" type="audio/mp3">
+		<source src="02.mp3" type="audio/mp3">
+	</audio>
+
+	<video id="vid" autoplay>
+		<source src="FF.mp4" type="video/mp4">
+	</video>
+	
+	<button type="button" id="btn">
+		Play
+	</button>
+
+	<script type="text/javascript">
+		var Vid = document.getElementById('vid');
+		var btn = document.getElementById('btn');
+		btn.onclick = function(){
+			Vid.pause();
+		}
+
+	</script>
+</body>
+</html>

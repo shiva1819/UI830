@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		#mainHeader{
+			width: 74.96339677891654%; /* 1024 */
+			background-color: #ccc;
+			margin: auto;
+			color: #fff;
+		}
+		.fL{
+			float: left;
+		}
+		.fR{
+			float: right;
+		}
+		#logo{
+			width: 19.53125%;
+			text-align: center;
+		}
+		#logo h2{
+			line-height: 50px;
+		}
+		#mainNav{
+			width: 70%;
+		}
+		#mainNav ul li{
+			display: inline-block;
+			width: 100px;
+			text-align: center;
+			line-height: 50px;
+		}
+		#btn{
+			display: none;
+		}
+
+
+		@media screen and (max-width: 768px){
+			#mainHeader{
+				width: 100%;
+				padding: 5px;
+				box-sizing: border-box;
+				position: relative;
+			}
+			#mainNav{
+				background-color: #ccc !important;
+				position: absolute;
+				left: 0px;
+				width: 100%;
+				top: 61px;
+				display: none;
+			}
+			.fR{
+				float: none !important;
+			}
+			#mainNav ul li{
+				display: block;
+				width: 100%;
+				text-align: center;
+			}
+			#btn{
+				display: inline-block;
+				float: right;
+				width: 70px;
+				line-height: 30px;
+			}
+		}
+
+		.clearfix{
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<main id="mainItem">
+		<header id="mainHeader">
+			<div id="logo" class="fL">
+				<h2> LOGO </h2>
+			</div>	
+			<button id="btn" type="button">
+				MENU
+			</button>
+			<nav id="mainNav" class="fR">
+				<ul>
+					<li>
+						Home
+					</li>
+					<li>
+						Home
+					</li>
+					<li>
+						Home
+					</li>
+					<li>
+						Home
+					</li>
+					<li>
+						Home
+					</li>
+					<li>
+						Home
+					</li>
+				</ul>
+			</nav>
+			<div class="clearfix"></div>
+		</header>
+	</main>
+</body>
+</html>
