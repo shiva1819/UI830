@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<input type="text" name="name" id="name">
+	<button type="button" id="btn"> Save </button>
+
+	<div id="demo"> </div>
+
+	<script type="text/javascript">
+		var Name = document.getElementById('name');
+		var Btn = document.getElementById('btn');
+
+		// localStroage, sessionStorage.
+		
+		btn.onclick = function(){
+			localStorage.setItem('Name', Name.value);
+			console.log(JSON.parse(localStorage.getItem('class')).length);
+			for(var i = 0; i < JSON.parse(localStorage.getItem('class')).length; i++){
+				document.getElementById('demo').innerHTML += "<h2>"+ JSON.parse(localStorage.getItem('class'))[i].name +"</h2>";
+			}
+		}
+
+		// localStorage.clear();
+		localStorage.removeItem('Name');
+
+		// sessionStorage.setItem('demo', "Testing...");
+
+		// document.getElementById('demo').innerText = localStorage.getItem('Name');
+
+	</script>
+</body>
+</html>

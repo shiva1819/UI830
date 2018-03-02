@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#can{
+			/*width: 400px;
+			height: 400px;*/
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="can" width="400" height="400">
+		your browser not support canvas..
+	</canvas>
+
+	<script type="text/javascript">
+		var mycan = document.getElementById('can');
+		var ctx = mycan.getContext('2d');
+
+
+		// ctx.fillStyle = "red"; 
+		// ctx.fillRect(0,0,400,400);
+		// ctx.clearRect(20,20,100,100);
+		// ctx.fill();
+		// ctx.moveTo(10,10); // starts at 10,10
+		// ctx.lineTo(250,150); // ends at 200,100
+		// ctx.moveTo(250,150);
+		// ctx.lineTo(300,0);
+		// ctx.fillStyle = "red"; 
+		
+		ctx.beginPath();
+		ctx.arc(50,50,10,0,2*Math.PI);
+		ctx.fillStyle = "red";
+		ctx.fill();
+
+
+	
+
+	</script>
+</body>
+</html>

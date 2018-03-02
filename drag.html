@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			transition: 1s;
+		}
+		#box{
+			width: 300px;
+			height: 300px;
+			border:1px solid;
+			transition: 1s;
+
+		}
+		#box1{
+			width: 300px;
+			height: 300px;
+			border:1px solid;
+			transition: 1s;
+
+		}
+		#box:hover img{
+			transform: translate(50px,50px) scale(1.5,1.5);
+		}
+	</style>
+</head>
+<body id="demo" ondrop="drop(event)" ondragover="dragMe(event)">
+	<div id="box" ondrop="drop(event)" ondragover="dragMe(event)">
+		
+	</div>
+	<div id="box1" ondrop="drop(event)" ondragover="dragMe(event)">
+		
+	</div>
+	<img src="smiley.jpg" draggable="true" ondragstart="drag(event)" id="dragItem">
+
+	<script type="text/javascript">
+
+		function dragMe(ev){
+			ev.preventDefault();
+		}
+
+		function drag(ev){
+			console.log(ev);
+			ev.dataTransfer.setData('item', ev.target.id);
+		}
+
+		function drop(ev){
+			ev.preventDefault();
+			var Id = ev.dataTransfer.getData('item');
+			console.log(Id);
+			ev.target.appendChild(document.getElementById(Id));
+		}
+		
+	</script>
+</body>
+</html>
