@@ -29,11 +29,49 @@
 		// ctx.moveTo(250,150);
 		// ctx.lineTo(300,0);
 		// ctx.fillStyle = "red"; 
-		
-		ctx.beginPath();
-		ctx.arc(50,50,10,0,2*Math.PI);
-		ctx.fillStyle = "red";
-		ctx.fill();
+	
+			
+			// console.log(x);		
+
+function animate(){
+	requestAnimationFrame(animate);
+			ctx.clearRect(0,0,400,400);
+			var dx = 10;
+
+			ctx.beginPath();
+			ctx.arc(100,100,10,0,2*Math.PI);
+			// ctx.fillStyle = 'black';
+			ctx.stroke();
+
+			if(dx > 400){
+				dx += 5;	
+			}
+			// dx += 5;
+
+			// if()
+
+}
+animate();
+		// for(var i = 0; i < 10; i++){
+		// 	var x = Math.random() * 400;
+		// 	var y = Math.random() * 400;
+		// 	var r = Math.ceil(Math.random() * 255);
+		// 	var g = Math.ceil(Math.random() * 255);
+		// 	var b = Math.ceil(Math.random() * 255);
+
+		// 	console.log('rgb('+r+','+ g +','+b +')');
+		// 	ctx.beginPath();
+		// 	ctx.arc(x,y,10,0,2*Math.PI);
+		// 	ctx.fillStyle = 'rgb('+r+','+ g +','+b +')';
+		// 	ctx.fill();
+		// }
+		ctx.font = "30px Arial";
+		ctx.fillText('Hey This is canvas', 100,100);
+
+
+
+
+
 
 
 	
