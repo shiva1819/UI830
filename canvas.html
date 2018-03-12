@@ -32,26 +32,35 @@
 	
 			
 			// console.log(x);		
-
+var dx = Math.random() * 4;
+var dy = Math.random() * 4;
+var x = 30;
+var y = 30;
 function animate(){
 	requestAnimationFrame(animate);
-			ctx.clearRect(0,0,400,400);
-			var dx = 10;
-
+			
+			
+			
+				ctx.clearRect(0,0,400,400);
 			ctx.beginPath();
-			ctx.arc(100,100,10,0,2*Math.PI);
+			ctx.arc(x,y,30,0,2*Math.PI);
 			// ctx.fillStyle = 'black';
 			ctx.stroke();
 
-			if(dx > 400){
-				dx += 5;	
+			if(x > 370 || x < 20){
+				dx = -dx;	
 			}
-			// dx += 5;
-
-			// if()
+			if(y > 370 || y  < 20){
+				dy = -dy;	
+			}
+			x += dx;
+			y += dy;
 
 }
+
+
 animate();
+
 		// for(var i = 0; i < 10; i++){
 		// 	var x = Math.random() * 400;
 		// 	var y = Math.random() * 400;
@@ -65,8 +74,8 @@ animate();
 		// 	ctx.fillStyle = 'rgb('+r+','+ g +','+b +')';
 		// 	ctx.fill();
 		// }
-		ctx.font = "30px Arial";
-		ctx.fillText('Hey This is canvas', 100,100);
+		// ctx.font = "30px Arial";
+		// ctx.fillText('Hey This is canvas', 100,100);
 
 
 

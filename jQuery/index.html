@@ -9,7 +9,7 @@
 			height: 100px;
 			background-color: lime;
 			margin-top: 10px;
-			display: none;
+			/*display: none;*/
 		}
 	</style>
 </head>
@@ -23,13 +23,41 @@
 	<div class="one">
 		This First Box 1
 	</div>
-
+	<button type="button" id="btn"> toggle </button>
+	<button type="button" id="btn1"> Stoptoggle </button>
 
 	<script type="text/javascript">
 		// text(), html();
 		console.log($('div p').html('<h2> This is Two </h2>'));
+		// slide, fade, hide, show, 
 		
-		$('#one').fadeToggle();
+
+		// selector.method(cb);
+
+		// event.
+		$('#btn').click(function(){
+			// $('#one').slideToggle();	
+			$('#one').animate({
+				'width':'250px',
+				'height':'250px'
+			},3000, function(){
+				alert('Animation is DOne....');
+			});
+		});
+
+
+		$('#one').mouseover(function(){
+			$('#one').stop();
+		})
+
+		// append, prepend, after, before,
+		// remove, clear
+
+
+
+
+
+
 
 
 	</script>
