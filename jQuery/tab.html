@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style type="text/css">
+		.active{
+			background-color: lime;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li class="active">
+			Home 
+		</li>
+		<li>
+			About 
+		</li>
+		<li>
+			Gallery
+		</li>
+	</ul>
+	<script type="text/javascript">
+		$('ul li').click(function(){
+			$('ul li').removeClass('active');
+			$(this).addClass('active');
+		});
+	</script>
+</body>
+</html>

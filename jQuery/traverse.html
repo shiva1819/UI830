@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style type="text/css">
+		.demo{
+			width:1024px;
+			margin: auto;
+			height: 200px;
+			background-color: crimson;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<article>
+		<p id="para">
+			Demo
+		</p>
+		<p>
+			Test
+		</p>
+		<div id="one">
+			<p>
+				lajsdlkajsdlkjaslkdjalksdjalksdj
+				<a href="#"> Some Text ...</a>
+			</p>
+		</div>
+		<div id="two">
+			<h2> This is Header...</h2>
+		</div>
+	</article>
+	<script type="text/javascript">
+		// find(), children(), parent(), parents(), parentsUntil(), siblings(), prev, prevAll,prevUntil, next, nextAll, nextUntil.
+		// console.log($('div#one').find('a'));
+		// console.log($('div#one').children());
+		// console.log($('a').parent());
+		// console.log($('a').parents());
+		// console.log($('a').parentsUntil('body'));
+
+
+		// console.log($('#one').siblings().html('<h3> This is New value from siblings....</h3>'));
+
+		// console.log($('#two').prev());
+		// console.log($('#two').prevAll());
+		// console.log($('#two').prevUntil('p'));
+
+		// console.log($('#para').next());
+		// console.log($('#para').nextAll());
+		// var arr = $('#para').nextUntil('#two');
+		// console.log(arr.html('<h3> This is Demo.....</h3>'));
+
+
+		// css, addClass, removeClass, toggleClass attr, removeAttr, prop 
+
+			// $('#one').css('background', 'lime');
+			$('#one').css({
+				background:'lime',
+				width:'300px',
+				height:'300px',
+				marginLeft:'100px'
+			});
+
+			$('#para').prop('class','demo test');
+
+			$('#para').click(function(){
+				// $(this).addClass('demo');
+				// $(this).removeClass('demo');
+				// $(this).toggleClass('demo');
+				$(this).removeAttr('class');
+
+			});
+
+
+	</script>
+</body>
+</html>

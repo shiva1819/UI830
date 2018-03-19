@@ -11,17 +11,16 @@
 	</ul>
 
 	<script type="text/javascript">
-		var arr = [{name:"Shiva"},{name:"prasad"},{name:"Hari"}];
+		/*var arr = [{name:"Shiva"},{name:"prasad"},{name:"Hari"}];
 
 		arr = JSON.stringify(arr); // JSON to string.
 		console.log(arr);
 		console.log(JSON.parse(arr)); // string to JSON.
-
+*/
 		
 		$.ajax({
-			url:"https://jsonplaceholder.typicode.com/users",
-			method:"POST",
-			data:JSON.stringify(arr),
+			method:"GET",
+			url:"https://jsonplaceholder.typicode.com/users",			
 			success:function(data){
 				console.log(data);
 				var info = null;
@@ -31,7 +30,7 @@
 				$('#data').html(info);
 			},
 			error:function(err){
-				console.log(err);
+				console.log(err.);
 				if(err.status == 404){
 					alert('Pleae try again later....');
 				}
