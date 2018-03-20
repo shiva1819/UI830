@@ -4,27 +4,76 @@
 	<title></title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
 		.active{
 			background-color: lime;
+		}
+		#main{
+			width:500px;
+			margin: auto;
+		}
+		#menuTab{
+			background-color: #aaa;
+		}
+		#menuTab li{
+			display: inline-block;
+			width:100px;
+			color: #fff;
+			text-align: center;
+			line-height: 40px;
+		}
+		div{
+			width:100%;
+			height: 300px;
+			padding: 10px;
+			box-sizing: border-box;
+			background-color: #ccc;
+			display: none;
 		}
 	</style>
 </head>
 <body>
-	<ul>
-		<li class="active">
-			Home 
-		</li>
-		<li>
-			About 
-		</li>
-		<li>
-			Gallery
-		</li>
-	</ul>
+	<main id="main">
+		<ul id="menuTab">
+			<li class="active">
+				Home 
+			</li>
+			<li>
+				About 
+			</li>
+			<li>
+				Gallery
+			</li>
+		</ul>
+		<div id="Home">
+			Home TAB
+		</div>
+		<div id="About">
+			About TAB
+		</div>
+		<div id="Gallery">
+			Gallery TAB
+		</div>
+	</main>
 	<script type="text/javascript">
 		$('ul li').click(function(){
 			$('ul li').removeClass('active');
 			$(this).addClass('active');
+
+			
+			if($(this).text().trim() == "Home"){
+				$('div').hide();
+				$('#Home').fadeIn();
+			}else if($(this).text().trim() == "About"){
+				$('div').hide();
+				$('#About').fadeIn();
+			}else{
+				$('div').hide();
+				$('#Gallery').fadeIn();
+			}
 		});
 	</script>
 </body>

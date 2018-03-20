@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		#main{
+			width:1024px;
+			margin: auto;
+
+		}
+		#mainHeader{
+			width:100%;
+			background-color: #bbb;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+		}
+		#mainHeader h1,nav{
+			display: inline-block;
+			width:40%;
+		}
+		#mainHeader nav ul li{
+			display: inline-block;
+			line-height: 50px;
+			font-size: 18px;
+			width:80px;
+			text-align: center;
+		}
+		#mainHeader nav ul li a{
+			color: #fff;
+			text-decoration: none;
+		}
+		.page{
+			height: 100vh;
+			background: #ccc;
+			padding-top: 50px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<main id="main">
+		<header id="mainHeader">
+			<h1 id="logo"> MY LOGO </h1>
+			<nav id="mainMenu">
+				<ul>
+					<li>
+						<a href="#Home"> Home </a>
+					</li>
+					<li>
+						<a href="#About"> About </a>
+					</li>
+					<li>
+						<a href="#Gallery"> Gallery </a>
+					</li>
+					<li>
+						<a href="#Contact"> Contact </a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<article id="Home" class="page">
+			Home Page
+		</article>
+		<article id="About" class="page">
+			ABout Page 
+		</article>
+		<article id="Gallery" class="page">
+			Gallery Page 
+		</article>
+		<article id="Contact" class="page">
+			Contact Page  
+		</article>
+	</main>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+
+
+			$('nav ul li a').click(function(){
+				var Src = $(this).attr('href');
+				// console.log($(Src));
+				console.log($(Src).offset().top);
+				$('body, html').animate({
+					scrollTop:$(Src).offset().top +'px'
+				},1000,'easeOutBounce');
+			});
+		});
+
+	</script>
+</body>
+</html>
